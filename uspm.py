@@ -45,7 +45,7 @@ def install(package):
   if not os.path.exists(sys.argv[2] + '.uspm'):
     download(sys.argv[2])
   os.system('tar xf '+package+'.uspm')
-  checkDeps(package)
+  checkDepsAndDl(package)
   os.system('sh ./' +package+'/PACKAGECODE install')
   packages = open(package+'/PACKAGEDATA', 'r').read()
   packageData = json.loads(packages)
