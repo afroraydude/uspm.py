@@ -5,6 +5,7 @@ mkdir -p /usr/local/share/uspm
 mv ./* /usr/local/share/uspm
 
 # link executable
+rm -rf /usr/local/bin/uspm
 ln -s /usr/local/share/uspm/uspm.py /usr/local/bin/uspm
 
 # create other folders
